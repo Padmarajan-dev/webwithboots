@@ -1,0 +1,108 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<style>
+		body
+		{
+			background:url('sav.png');
+		}
+		.errormsg
+		{
+			color:2px red;
+			margin-left:20%;
+		}
+		.form-control
+		{
+			width:70%;
+			background:none;
+			background-color:none;
+			border:2px solid hsl(264, 51%, 27%); 
+			border-radius:50px;
+		}
+		.form-group
+		{
+			margin-top:6%;
+		}
+		.col-lg-6,.col-md-6,.col-sm-12
+		{
+			margin-top:6%;
+			height:60%;
+			width:92%;
+			background-color:#e1a942;
+			border-radius:10px;
+			box-shadow:10px 10px 15px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-lg-6 col-md-10 col-sm-12 thisbox animated jackInTheBox"  style="padding:1%;">
+				<form>
+					<h3 align="center" class="display-8" style="color:#3c0f8d;">JAVASCRIPT FORM</h3>
+					<div class="form-group">
+						<center><input type="text" id="user" name="user" class="form-control" autofocus autocomplete="off" placeholder="ENTER USERNAME"></center>
+						<p class="errormsg" id="errm1">please enter the username</p>
+					</div>
+					<div class="form-group">
+						<center><input type="password" id="password" name="pass" class="form-control" placeholder="ENTER PASSWORD"></center>  
+						<p class="errormsg" id="errm2">please enter the Password</p>       
+					</div>	
+					<div class="form-check" style="margin-left:14%;">
+						<label class="form-check-label">
+							<input type="checkbox"  id="show" class="form-check-control">Show Password
+						</label>
+					</div>			
+					<div class="text-center">
+						<button type="button" style="margin-top:8%;width:40%;border-radius:50px;"class="btn btn-info" id="save">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$("#show").click(function()
+	{
+		if($(this).prop('checked')==true)
+		{
+			$("#password").attr('type','text');
+		}else
+		{
+			$("#password").attr('type','password');
+		}
+	});		
+	$("#save").click(function(){
+			if($('#user').val()=="")
+			{
+				$(".thisbox").removeClass('animated jackInTheBox');
+				$(".thisbox").addClass('animated wobble');
+			}else if($('#password').val()=="")
+			{
+				$(".thisbox").removeClass('animated jackInTheBox');
+				$(".thisbox").addClass('animated wobble');	
+			}
+			else{
+				$(".thisbox").removeClass('animated jackInTheBox');
+				$(".thisbox").addClass('flipOutX');
+				$(".thisbox").css('animation-duration:3s');
+				window.location="nextpage.html";
+			}
+	});
+	$("#user").change(function()
+	{
+		$('#errm1').addClass('animated hinge');
+	});
+	$("#password").change(function()
+	{
+		$('#errm2').addClass('animated hinge');
+	});
+	
+</script>
+</html>
