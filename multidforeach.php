@@ -1,23 +1,16 @@
 <?php 
 include "connection.php";
-?>
-<?php
 if(isset($_POST['sav']))
 {
 	$da=$_POST['data'];
-	print_r($_POST);
 	foreach ($da as $key=>$value) {
-		# code...
-			$names=$val['name'];
-			$techs=$val['tech'];
-			$xps=$val['exp'];
-			echo $ke."".$names;
-			echo $ke."".$techs;
-			echo $ke."".$xps;
+		echo $key."-".$value[0]."<br>";
+		foreach ($value as $key=>$va) {
+               
 	/*$qu="insert into multitab(Name,tech,exp)values('$names','$techs','$xps')";
 	mysqli_query($con,$qu);*/
 }
-
+}
 }
 ?>
 <!DOCTYPE html>
@@ -48,6 +41,20 @@ if(isset($_POST['sav']))
 					</tr>
 				</tbody>
 			</table>
+			<table class="table table-dark table-bordered table-striped" id='t2'>
+				<thead>
+					<tr>
+						<td>rno</td>
+						<td>student</td>
+						<td>year</td>
+						<td>Age</td>
+					</tr>
+				</thead>
+				<tbody id="tb1">
+					<tr>
+					</tr>
+				</tbody>
+			</table>
 			<button type="submit" class="btn btn-info"name="sav">Save</button>
 			<button type="button" class="btn btn-success" name="sav" id="add">Add</button>
 			<button type="button" class="btn btn-danger" name="sav" id="del">Del</button>
@@ -63,12 +70,20 @@ if(isset($_POST['sav']))
 			var html;
 			html+="<tr>";
 			html+="<td><input type='checkbox' name='req'></td>";
-			html+="<td><input type='text' name='data[][name]'></td>";
-			html+="<td><input type='text' name='data[][tech]' ></td>";
-			html+="<td><input type='number' name='data[][exp]'></td>";
+			html+="<td><input type='text' name=data['name'][]></td>";
+			html+="<td><input type='text' name=data['tech'][]></td>";
+			html+="<td><input type='number' name=data['exp'][]></td>";
 			html+="</tr>";
-			$("table tbody").append(html);
-		});
+			$("#t1 tbody").append(html);
+			var htm;
+			htm+="<tr>";
+			htm+="<td><input type='text' name=data['rno'][]></td>";
+			htm+="<td><input type='text' name=data['sname'][]></td>";
+			htm+="<td><input type='text' name=data['year'][]></td>";
+			htm+="<td><input type='text' name=data['Age'][]></td>";
+			htm+="</tr>";
+			$("#tb1").append(htm);
+					});
 		$("#del").click(function()
 		{
 			$("table tbody input[type='checkbox']").each(function()
