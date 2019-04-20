@@ -3,15 +3,25 @@ include "connection.php";
 if(isset($_POST['sav']))
 {
 	$da=$_POST['data'];
-	foreach ($da as $key=>$value) {
-		echo $key."-".$value[0]."<br>";
-		foreach ($value as $key=>$va) {
+	//$le=sizeof($da);
+	foreach($da as $key=>$va) {
+		$na=$da['name'];
+		$te=$da['tech'];
+		$exp=$da['exp'];
+		$rno=$da['rno'];
+		$stn=$da['sname'];
+		$year=$da['year'];
+		$age=$da['Age'];
+		$le=sizeof($na);
+		}
+		for($i=0;$i<$le;$i++)
+		  {
+             	$qu="insert into multitab(Name,tech,exp,rno,stname,year,age)values('$na[$i]','$te[$i]','$exp[$i]','$rno[$i]','$stn[$i]','$year[$i]','$age[$i]')";
+	mysqli_query($con,$qu);
+		  }
+		   
+}
                
-	/*$qu="insert into multitab(Name,tech,exp)values('$names','$techs','$xps')";
-	mysqli_query($con,$qu);*/
-}
-}
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,17 +80,17 @@ if(isset($_POST['sav']))
 			var html;
 			html+="<tr>";
 			html+="<td><input type='checkbox' name='req'></td>";
-			html+="<td><input type='text' name=data['name'][]></td>";
-			html+="<td><input type='text' name=data['tech'][]></td>";
-			html+="<td><input type='number' name=data['exp'][]></td>";
+			html+="<td><input type='text' name='data[name][]'></td>";
+			html+="<td><input type='text' name='data[tech][]'></td>";
+			html+="<td><input type='number' name='data[exp][]'></td>";
 			html+="</tr>";
 			$("#t1 tbody").append(html);
 			var htm;
 			htm+="<tr>";
-			htm+="<td><input type='text' name=data['rno'][]></td>";
-			htm+="<td><input type='text' name=data['sname'][]></td>";
-			htm+="<td><input type='text' name=data['year'][]></td>";
-			htm+="<td><input type='text' name=data['Age'][]></td>";
+			htm+="<td><input type='text' name=data[rno][]></td>";
+			htm+="<td><input type='text' name=data[sname][]></td>";
+			htm+="<td><input type='text' name=data[year][]></td>";
+			htm+="<td><input type='text' name=data[Age][]></td>";
 			htm+="</tr>";
 			$("#tb1").append(htm);
 					});
