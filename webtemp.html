@@ -3,13 +3,41 @@
 <head>
 	<title>WebTemplate</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
+		@media(max-width:544px){
+			.fa
+			{
+				margin-top:1%;
+				display:inline-flex;
+				justify-content:center;
+				align-items:center;
+				margin-left:2%;
+				width:6%;
+				height:2.5em;
+				border-radius:50%;
+				transition:1s linear;
+				padding:3%;
+			}
+			.fa:hover
+			{
+				margin-top:1%;
+				display:inline-flex;
+				justify-content:center;
+				align-items:center;
+				margin-left:2%;
+				width:3%;
+				height:2.5em;
+				border-radius:50%;
+				transform:scale(1.4);
+				padding:3%;
+			}
+		}
 		.fa
 		{
 			margin-top:1%;
@@ -58,19 +86,22 @@
 		.con1
 		{
 			height:30em;
-			width:106%;
+			width:110%;
+			margin-left:-4%;
 			box-shadow:10px 10px 15px;
 			background-color:#e6475c;
 		}
 		.con
 		{
 			height:auto;
-			width:106%;
+			width:110%;
+			margin-left:-4%;
 			box-shadow:10px 10px 15px;
 			background-color:white;
 			margin-top:8%;
 			font-style:oblique;
 			margin-bottom:2%;
+			padding:4%;
 		}
 		.bt1
 		{
@@ -156,14 +187,14 @@
 			background-color:hsl(291, 64%, 49%);;
 			height:4.2em;
 			width:110%;
-			margin-left:-3%;
+			margin-left:-4%;
 			margin-top:30%;
 		}
 	</style>
 </head>
 <body>
 	<div class="container-fluid">
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="position:absolute;z-index:1;width:105%;margin-left: -1.6%;box-shadow:0px 3px;border-bottom:0px;">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="position:absolute;z-index:1;width:104%;margin-left:-3.8%;box-shadow:0px 3px;border-bottom:0px;">
 			<a class="navbar-brand" href="#" style="color:white;">MyBlog</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colnav">
 				<span class="navbar-toggler-icon"></span>
@@ -180,8 +211,8 @@
 		<section class="container-fluid con1">
 			<div class="row">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-					<center><b><p class="webi" style="font-style:15px oblique;color:white;margin-top:13%;">This Is My WebPage Blog</p></b><br></center>
-					<center><p class="webi" style="font-style:15px oblique;color:white;margin-top:1%;">We will make a awesome WebPages.<br>
+					<center><b><p class="webi" style="font-style:15px oblique;color:white;margin-top:20%;">This Is My WebPage Blog</p></b><br></center>
+					<center><p class="webi" style="font-style:15px oblique;color:white;margin-top:0.8%;">We will make a awesome WebPages.<br>
 						Then We also do some SEO Works,Graphic Designing,PhotoShop Works.<br>We're The Full Stack 
 					Developers.</p></center>
 				</div>
@@ -191,40 +222,40 @@
 			<div class="row">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 					<center><h4>OUR SERVICES</h4></center>
-						<div class="col-10 col-sm-10 col-md-4 col-lg-3 mx-auto bo" style="background-color:#98aeb9;">
-							<img src="icon1.png" class="ic">
-							<b><p>Full Stack Developing</p></b>
-							<p> A full stack developer is an engineer who can handle all the work of databases, servers, systems engineering, and clients.</p>
-							<button class="bt">More+</button>
-						</div>
-						<div class="col-10 col-sm-10 col-md-4 col-lg-3 mx-auto bo" style="background-color:white;">
-							<img src="icon2.png" class="ic">
-							<b><p>Graphic Designing</p></b>
-							<p>Graphic design is the process of visual communication and problem-solving through the use of typography, photography, and illustration</p>
-							<button class="bt">More+</button>
-						</div>
-						<div class="col-10 col-sm-10 col-md-4 col-lg-3 mx-auto bo"  style="background-color:hsl(45, 71%, 43%);;">
-							<img src="icon3.png" class="ic">
-							<b><p>SEO Developement</p></b>
-							<p><b><span style="color:brown">Search engine optimization (SEO)</b></span> is the process of increasing the quality and quantity of website.</p>
-							<button class="bt">More+</button>
-						</div>
+					<div class="col-10 col-sm-10 col-md-4 col-lg-3 mx-auto bo" style="background-color:#98aeb9;">
+						<img src="icon1.png" class="ic">
+						<b><p>Full Stack Developing</p></b>
+						<p> A full stack developer is an engineer who can handle all the work of databases, servers, systems engineering, and clients.</p>
+						<button class="bt">More+</button>
 					</div>
+					<div class="col-10 col-sm-10 col-md-4 col-lg-3 mx-auto bo" style="background-color:white;">
+						<img src="icon2.png" class="ic">
+						<b><p>Graphic Designing</p></b>
+						<p>Graphic design is the process of visual communication and problem-solving through the use of typography, photography, and illustration</p>
+						<button class="bt">More+</button>
+					</div>
+					<div class="col-10 col-sm-10 col-md-4 col-lg-3 mx-auto bo"  style="background-color:hsl(45, 71%, 43%);;">
+						<img src="icon3.png" class="ic">
+						<b><p>SEO Developement</p></b>
+						<p><b><span style="color:brown">Search engine optimization (SEO)</b></span> is the process of increasing the quality and quantity of website.</p>
+						<button class="bt">More+</button>
+					</div>
+				</div>
 			</div>
 		</section>
 		<footer>
 			<center><a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-google"></a></center>
-		</footer>
-	</div>
-	<script type="text/javascript">
-		$(".webi").hide();
-		function sho()
-		{
-			$(".webi").slideDown(2000);
-		}
-		sho();
-	</script>
-</body>
-</html>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-google"></a></center>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			$(".webi").hide();
+			function sho()
+			{
+				$(".webi").slideDown(2000);
+			}
+			sho();
+		</script>
+	</body>
+	</html>
