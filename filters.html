@@ -68,15 +68,16 @@
 			//fname=$(name).text();
 			console.log(row);
 		});*/
-		$('div').on('vmouseover',function(){
+		$('div').on('touchstart',function(){
          idval=$(this).prop('id');
-         alert(idval);
+         $('#t2').html(idval);
 		});
 		$('.btn').click(function(){
 		$(this).closest('.userdetails').find('#name').css("background-color","skyblue");
 		});
-		$('.user #name').on("mouseover",function(){
-			$(this).removeAttr('readonly');
+		$('div').on('touchstart',function(){
+         idval=$(this).prop('id');
+         $('#t2').html(idval);
 		});
 		$('.user #name').on("keyup",function(){
 			name=$(this).val();
