@@ -69,8 +69,10 @@
 			console.log(row);
 		});*/
 		$('div').on('touchstart',function(){
-         idval=$(this).prop('id');
-         $('#t2').html(idval);
+                  $('table').hide();
+		});
+		$('div').on('touchend',function(){
+                  $('table').show();
 		});
 		$('.btn').click(function(){
 		$(this).closest('.userdetails').find('#name').css("background-color","skyblue");
