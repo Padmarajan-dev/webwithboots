@@ -68,11 +68,11 @@
 			//fname=$(name).text();
 			console.log(row);
 		});*/
-		$('div').on('touchstart',function(){
-                  $('table').hide();
+		$('div').on("mouseover",function(){
+			alert("something");
 		});
-		$('div').on('touchleave',function(){
-                  $('table').show();
+		$('div').on('touchstart',function(){
+			alert("something");
 		});
 		$('.btn').click(function(){
 		$(this).closest('.userdetails').find('#name').css("background-color","skyblue");
