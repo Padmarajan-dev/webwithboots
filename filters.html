@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>filters</title>
+	<meta name="viewport" content="width=device-width,initial-sacle=1.0">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="plugins/viewbox-master/jquery.viewbox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="plugins/viewbox-master/viewbox.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<style type="text/css">
+		#name
+		{
+			background-color:transparent;
+			border:none;
+			outline:none;
+		}
+	</style>
+</head>
+<body>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Age</td>
+				<td>Action</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="userdetails">
+				<td class="edits"><input type="text" id="name" value="ram" readonly></td>
+				<td class="edits">32</td>
+				<td id="1">
+					<button class="btn btn-info fa fa-edit" value="1" id="edit1"></button>
+				</td>
+			</tr>
+			<tr class="userdetails">
+				<td class="user"><input type="text" id="name" value="rakesh" readonly></td>
+				<td>30</td>
+				<td>
+					<button class="btn btn-info fa fa-edit" value="2" id="edit"></button>
+				</td>
+			</tr>
+			<tr class="userdetails">
+				<td class="user"><input type="text" id="name" value="karan" readonly></td>
+				<td>45</td>
+				<td>
+					<button class="btn btn-info fa fa-edit" value="3" id="edit"></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="1" style="height:5em;width:3em;background-color:red;">
+	</div>
+	<div id="2" style="height:5em;width:3em;background-color:blue;">
+		<p id="t1">hi</p>
+		<p id="t2">hlo</p>
+	</div>
+	<script type="text/javascript">
+		/*$('.btn').on('click',function() {
+			row=$(this).closest('#name').removeAttr("readonly");
+			//name="#"+row+" .user";
+			//fname=$(name).text();
+			console.log(row);
+		});*/
+		$('div').on("mouseenter",function(){
+         idval=$(this).prop('id');
+         alert(idval);
+		});
+		$('.btn').click(function(){
+		$(this).closest('.userdetails').find('#name').css("background-color","skyblue");
+		});
+		$('.user #name').on("mouseover",function(){
+			$(this).removeAttr('readonly');
+		});
+		$('.user #name').on("keyup",function(){
+			name=$(this).val();
+			$.ajax({
+				url:"response.php",
+				type:"post",
+				context:this,
+				data:{name:name},
+				success:function(res)
+				{
+					$(this).val(res);
+					$(this).on("mouseleave",function()
+					{
+						$(this).attr('readonly');
+					});
+				}
+			});
+		});
+	</script>
+</body>
+</html>
