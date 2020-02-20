@@ -1,14 +1,353 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>MyAngular</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<title>MY DIGITAL RESUME</title>
+     <link  href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link type="text/css" rel="stylesheet" href="sass/myDigitalresume.css" >
+     <link type="text/css" rel="stylesheet" href="sass/customcssprop.css" >
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="slider/slider.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <app-root></app-root>
-<script src="runtime-es2015.js" type="module"></script><script src="polyfills-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule></script><script src="polyfills-es5.js" nomodule></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule></script><script src="vendor-es2015.js" type="module"></script><script src="main-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule></script><script src="main-es5.js" nomodule></script></body>
+  <!--sidebar-->
+  <ul class="side black center hide animated" id="sidenav" style="opacity:0.83;">
+    <li><button onclick="closesidebar()" class="material-icons mt-6">close</button></li>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Skills</a></li>
+		<li><a href="#">My Works</a></li>
+		<li><a href="#">Contact Us</a></li>
+  </ul>
+  <!---->
+    <!--Top-->
+   <div class="container-fluid">
+    <nav style="background:url('images/parllel1.jpg')">
+		<div class="nav-wrapper">
+      <button onclick="opensidebar()" class="sidebut material-icons ml-2 hide-on-med-and-up">menu</button>
+			<ul class="right hide-on-small-only">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Skills</a></li>
+				<li><a href="#">My Works</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</div>
+  </nav>
+    <div class="section white top">
+      <div class="row container   mt-6 animated slideInRight" id="banner1">
+        <h4 class="intro">Hi I'm PadmaRajan</h4>
+        <p class="intro ml-1 mt-1">Website Developer</p>
+        <div class="col  mt-2">
+          <button class="btn" id="cv"><a download style="color:white" href="https://drive.google.com/file/d/1rXyF5qDM0-TM5t90Xoi0QuI7GjRuFa0L/view?usp=drivesdk">Download Resume</a></button>
+        </div>
+      </div>
+      <div class="row container hide mt-6 animated slideInRight" id="banner2">
+        <p class="intro ml-1 mt-1">
+          Let the future tell the truth, and evaluate each one according to his work and accomplishments.
+           The present is theirs; the future, for which I have really worked, is mine
+          <h5 class="intro">-Nikola Tesla</h5>
+         </p>
+      </div>
+      <div class="row container hide mt-6 animated slideInRight" id="banner3">
+        <p class="intro ml-1 mt-1">
+          Arise,awake and donot stop until the goal is reached.
+          <h5 class="intro">-Swami Vivekananda</h5>
+         </p>
+      </div>
+    
+      <div class="row container hide mt-6 animated slideInRight" id="banner4">
+        <h4 class="intro">Hi I'm PadmaRajan</h4>
+        <p class="intro ml-1 mt-1">Website Developer</p>
+        <div class="col  mt-2">
+          <button class="btn" id="cv">Download Resume</button>
+        </div>
+      </div>
+    </div>
+      <!--//top-->
+      <!--objective-->
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header intro">Objective</h2>
+        <p class="grey-text text-darken-3 lighten-3" style="font-family:'Kite One', sans-serif;;">
+          Looking for a challenging role in a reputable 
+          organization to utilize my technical, database, and management skills for the growth of the organization as well as to enhance
+          my knowledge about new and emerging trends in the IT sector.
+        </p>
+      </div>
+    </div>
+       <!--//objective-->
+    <div class="parallax-container">
+       <div class="parallax"><img src="images/parllel4.jpg"></div>
+    </div>
+       <!--skills-->
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header intro">Skills</h2>
+        <div class=" col s10 m6 l4  skills">
+           <h6 class="skill-title">HTML <span class="right">86%</span></h6>
+           <div class="skill-level-line mt-3 slideIngeffect"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            style="background-color: rgb(164, 164, 211);width:86%;">
+          </div>
+        </div>
+        <div class=" col s10 m6 l4  skills">
+          <h6 class="skill-title">CSS <span class="right">80%</span></h6>
+          <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          style="background-color: rgb(168, 240, 75);width:80%;">
+          </div> 
+        </div>
+        <div class=" col s10 m6 l4 skills">
+          <h6 class="skill-title">SCSS<span class="right">76%</span></h6>
+          <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          style="background-color: rgb(194, 167, 216);width:76%;">
+          </div>
+        </div>
+        <div class=" col s10 m6 l4 skills">
+          <h6 class="skill-title">Angular 8 <span class="right">70%</span></h6>
+          <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect" 
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          style="background-color: rgba(196, 20, 20, 0.822);width:70%;">
+          </div>
+        </div>
+        <div class=" col s10 m6 l4 skills">
+          <h6 class="skill-title">javascript <span class="right">75%</span></h6>
+          <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect" 
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          style="background-color: rgb(163, 43, 243);width:75%;">
+          </div>
+        </div>
+        <div class=" col s10 m6 l4 skills">
+         <h6 class="skill-title">Jquery <span class="right">80%</span></h6>
+         <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect" 
+         data-aos="zoom-in"
+         data-aos-duration="2000"
+         style="background-color: rgba(192, 172, 81, 0.548);width:80%;">
+         </div>
+        </div>
+        <div class=" col s10 m6 l4 skills">
+         <h6 class="skill-title">PHP <span class="right">78%</span></h6>
+         <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect" 
+         data-aos="zoom-in"
+         data-aos-duration="2000"
+         style="background-color: rgb(21, 255, 0);width:78%;">
+        </div>
+       </div>
+       <div class=" col s10 m6 l4 skills">
+         <h6 class="skill-title">MySql<span class="right">72%</span></h6>
+         <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect"
+         data-aos="zoom-in"
+         data-aos-duration="2000"
+         style="background-color: rgb(97, 97, 100);width:72%;">
+        </div>
+       </div>
+       <div class=" col s10 m6 l4 skills">
+         <h6 class="skill-title">MongoDB <span class="right">65%</span></h6>
+         <div class="col s10 m6 l4 mt-3 skill-level-line slideIngeffect" 
+         data-aos="zoom-in"
+         data-aos-duration="2000"
+         style="background-color: rgb(228, 176, 225);width:65%;">
+        </div>
+       </div>
+      </div>
+    </div>
+       <!--//skills-->
+    <div class="parallax-container">
+      <div class="parallax"><img src="images/parllel6.jpg"></div>
+   </div>
+      <!--Portfolio-->
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header intro">PortFolio</h2>
+         <div class="col s12 m6 l4 portfolio-box mt-1" 
+         data-aos="fade-right"
+         data-aos-offset="300"
+         data-aos-easing="ease-in-sine" 
+         style="background:url('images/portfolio-img-1.jpg');background-size:cover;background-position:center;">
+          <div class="col s12 m6 l4 mt-1 center content animated zoomIn">
+            <h5>Simple Resume</h5>
+            <button class="btn mt-4"><a href="http://www.padamarajan.com.s3-website.ap-south-1.amazonaws.com/myresume/#">View</a></button>
+          </div>
+        </div>
+         <div class="col s12 m6 l4 portfolio-box mt-1 ml-l-1" 
+         data-aos="fade-left"
+         data-aos-offset="300"
+         data-aos-easing="ease-in-sine"  
+         style="background:url('images/portfolio-img-2.jpg');background-size:cover;background-position:center;">
+         <div class="col s12 m6 l4 mt-1 center content animated zoomIn">
+            <h5>Simple HTML Template</h5>
+            <button class="btn mt-4"><a href="https://padmarajanssp.github.io/webwithboots/senboo/webwithboots.html">View</a></button>
+        </div>
+        </div>
+        <div  class="col s12  m6 l4 portfolio-box mt-1 " 
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" 
+        style="background:url('images/portfolio-img-3.jpg');background-size:cover;background-position:center;">
+        <div class="col s12 m6 l4 mt-1 center content animated zoomIn">
+          <h5>Angular simple project</h5>
+          <button class="btn mt-4">View</button>
+        </div>
+        </div>
+        <div  class="col s12  m6 l4 portfolio-box mt-1 ml-1" 
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" 
+        style="background:url('images/parllel4.jpg');background-size:cover;background-position:center;">
+        <div class="col s12 m6 l4 mt-1 center content animated zoomIn">
+          <h5>Angular simple project</h5>
+          <button class="btn mt-4">View</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--//portfolio-->
+    <div class="parallax-container">
+      <div class="parallax"><img src="images/parllel3.jpg"></div>
+   </div>
+      <!--education-->
+   <div class="section white education">
+     <div class="row container ">
+      <h2 class="header intro">Education</h2>
+      <div class="row">
+        <div class="col s10 m8 l5  yearspan yearspan-up center"
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+          <p class="mt-6">2018-Present</p>
+        </div>
+        <div class="col s10 m8 l7  AboutEducation center"
+        data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+          <p class="title">M.SC in Computer Science</p>
+          <p class="desc">Pursuing M.sc Computer Science,At Bharathidhasan University, Trichy.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s10 m8 l7  AboutEducation center"
+        data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+          <p class="title">B.SC in Computer Science</p>
+          <p class="desc">Completed B.sc Computer Science,At American College Madurai</p>
+        </div>
+        <div class="col s10 m8 l5  yearspan yearspan-down center"
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+          <p class="mt-6">2015-2018</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s10 m8 l5  yearspan yearspan-up center"
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+          <p class="mt-6">2014-2015</p>
+        </div>
+        <div class="col s10 m8 l7  AboutEducation center"
+        data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
+          <p class="title">Higher Secondary</p>
+          <p class="desc">Completed H.S.S.C Passed Out,With 79.5% At Sambaviga Higher Secondary School Sivagangai</p>
+        </div>
+      </div>
+     </div>
+   </div>
+         <!--//education-->
+   <div class="parallax-container">
+    <div class="parallax"><img src="images/parllel7.jpg"></div>
+ </div>
+ <div class="section white">
+  <div class="row container ">
+    <h2 class="header intro">Contact Us</h2>
+    <div class="col s12 m12 l12 mail-box">
+      <div class="col s12 m10 l10   mt-1">
+        <input type="text" placeholder="Enter Your Email-id">
+      </div>
+        <div class="col s12 m10 l10 mt-1">
+         <input type="text" placeholder="Subject">
+        </div>
+        <div class="col s12 m10 l10 mt-3">
+          <input type="textarea">
+        </div>
+        <div class="col s10 m10 l10 mt-3 ml-1">
+           <button class="btn">Send</button>
+        </div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer blue">
+  <div class="row social-icons">
+    <div class="col s12 m12 l12">
+      <a href="mailto:rajussp31121997@gmail.com"><button class="btn ml-4 ml-l-6  social" style="background-color:rgb(168, 160, 43);"><i class="fa fa-google-plus-official" aria-hidden="true"></i></button></a>
+      <a href="https://www.facebook.com/profile.php?id=100021045661515"><button class="btn ml-4 ml-l-6  social" style="background-color:rgb(109, 15, 172);"><i class="fa fa-facebook-square" aria-hidden="true"></i></button></a>
+      <a href="https://github.com/padmarajanssp?tab=repositories"><button class="btn ml-4 ml-l-6  social" style="background-color:rgb(39, 55, 63);" ><i class="fa fa-github" aria-hidden="true"></i></button></a>
+      <a href="https://www.linkedin.com/in/raju-ssp-8b8211183/"><button class="btn ml-4 ml-l-6  social" style="background-color:rgb(171, 68, 240);"><i class="fa fa-linkedin" aria-hidden="true"></i></button></a>
+    </div>
+    
+  </div>
+</footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="slider/slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+   <script type="text/javascript">
+       AOS.init();
+   	//for parallax
+     $('.parallax').parallax();
+    //for sidenav
+    function opensidebar()
+    {
+      $('.side').removeClass('slideOutLeft');
+      $('.side').addClass('slideInLeft');
+      $('.side').removeClass('hide');
+      $('.sidebut').addClass('hide');
+      $('.container-fluid').addClass('hide');
+    }
+    function closesidebar()
+    {
+      $('.side').removeClass('slideInLeft');
+      $('.side').addClass('slideOutLeft');
+      $('.side').addClass('hide');
+      $('.sidebut').removeClass('hide');
+      $('.container-fluid').removeClass('hide');
+    }
+    var i=1;
+    function slider(num)
+    {
+      i=num+1;
+      $('#banner'+(i-1)).addClass('hide');
+      $('#banner'+i).removeClass('hide');
+      if(i==5)
+      {
+        i=1;
+      }
+    }
+    setInterval(()=>{
+    slider(i);
+    },5000);
+    $('.content').hide();
+    $('.portfolio-box').hover(function(){
+     $(this).find('div.content').show();
+    });
+    $('.portfolio-box').mouseleave(function(){
+     $(this).find('div.content').hide();
+    });
+   </script>
+   </div>
+</body>
 </html>
